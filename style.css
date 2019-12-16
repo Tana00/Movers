@@ -48,7 +48,22 @@ label span {
 .form-group small {
   font-size: 12px;
 }
-
+.submit-btn {
+  background-color: #33b9b2 !important;
+  border: none;
+}
+.submit-btn:focus,
+.submit-btn:active {
+  background-color: #33b9b2 !important;
+}
+.cancel-btn {
+  background-color: #f63954 !important;
+  border: none;
+}
+.cancel-btn:focus,
+.cancel-btn:active {
+  background-color: #f63954 !important;
+}
 /* HERO SECTION */
 .hero-section {
   margin-top: 6em;
@@ -398,15 +413,15 @@ ul.social-network li {
     margin-top: 5em;
   }
   .hero {
-    height: 60vw;
+    height: 70vw;
   }
   .bar {
-    height: 60vw;
+    height: 70vw;
     top: 0;
   }
   .hero h1 {
     font-size: 8vw;
-    top: 13vw;
+    top: 15vw;
   }
   .hero p {
     font-size: 3vw;
@@ -420,5 +435,28 @@ ul.social-network li {
   }
   .mystyle {
     margin-top: 130px !important;
+  }
+  h1 {
+    font-size: 2em;
+    margin: 1em auto;
+  }
+  .services-section,
+  .contact-section {
+    margin-top: 3em;
+  }
+  .services-section .media {
+    margin: 2em auto;
+  }
+  .us-title,
+  .contact-title {
+    margin: 1em auto;
+  }
+  .benefits-item {
+    margin-top: 0%;
+  }
+  .us-title:after,
+  .services-title:after,
+  .contact-title:after {
+    display: none;
   }
 }
