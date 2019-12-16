@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Movers</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/css/mdb.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <div class="container">
+      <nav
+        class="navbar navbar-expand-lg navbar-light scrolling-navbar fixed-top"
+      >
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="https://i.pinimg.com/originals/51/f2/b6/51f2b6efa4bcb0d46a869b52f4b5e36b.jpg"
+            width="60"
+            height="60"
+            class="d-inline-block align-top"
+            alt="logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#hero"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#benefits">Why US</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <button
+            class="btn btn-outline-danger my-2 my-sm-0"
+            type="submit"
+            data-toggle="modal"
+            data-target="#exampleModalLong"
+          >
+            GET FREE QUOTE
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Modal -->
+    <div
+      style="padding-right: 0;"
+      class="modal fade"
+      id="exampleModalLong"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLongTitle">
+              Get Free Quote
+            </h3>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>
+              Please enter your information below so we can process your moving
+              request.
+            </h5>
+            <p>Fields marked with an <span>*</span> are required</p>
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Full Name <span>*</span></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter First and Last Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1"
+                  >Phone Number <span>*</span></label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1"
+                  >Email Address <span>*</span></label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1"
+                  >Moving From Address <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter First and Last Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputEmail1"
+                  >Moving To Address <span>*</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter First and Last Name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1"
+                  >Moving From (Type Of Apartment) <span>*</span></label
+                >
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Flat</option>
+                  <option>Duplex</option>
+                  <option>Office Space</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlSelect1"
+                  >Moving To (Type Of Apartment) <span>*</span></label
+                >
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Flat</option>
+                  <option>Duplex</option>
+                  <option>Office Space</option>
+                </select>
+              </div>
+              <label for="services"
+                >What services may we assist you with? <span>*</span></label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck1"
+                />
+                <label class="form-check-label" for="defaultCheck1">
+                  Just A Truck
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck2"
+                />
+                <label class="form-check-label" for="defaultCheck1">
+                  Cleaning
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck3"
+                />
+                <label class="form-check-label" for="defaultCheck1">
+                  Unpacking and Re-arranging
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="defaultCheck4"
+                />
+                <label class="form-check-label" for="defaultCheck1">
+                  Uninstallation and Installation of electrical appliances
+                </label>
+              </div>
+              <div class="form-group mt-3">
+                <label for="exampleFormControlTextarea1"
+                  >Enter Additional Moving Information</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary btn-block"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" class="btn btn-primary btn-block">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section ">
+      <div class="hero">
+        <h1>MOVING SERVICES</h1>
+        <p>
+          With years of experience in the office & home relocation service, Our
+          aim is to make your move as FAST and STRESS-FREE as possible.
+        </p>
+        <button
+          class="btn btn-danger my-2 my-sm-0 py-3 px-5"
+          type="submit"
+          data-toggle="modal"
+          data-target="#exampleModalLong"
+        >
+          GET FREE QUOTE NOW
+        </button>
+        <img
+          src="https://i1.wp.com/movingtips.wpengine.com/wp-content/uploads/2018/07/movers-carrying-boxes.jpg?fit=1024%2C684&ssl=1"
+        />
+        <div class="bar"></div>
+      </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="container services-section">
+      <h1 class="text-center services-title">WHAT WE OFFER</h1>
+
+      <div class="row media">
+        <div class="col-sm-12 col-lg-6" data-aos="fade-right">
+          <img
+            src="http://expressmovers.com.ng/wp-content/uploads/2017/12/17027321127_a9e87c5761.jpg"
+            class="img-fluid"
+            alt="..."
+          />
+        </div>
+        <div class="col-sm-12 col-lg-6" data-aos="fade-left">
+          <div class="media-body">
+            <h4 class="my-3">
+              RESIDENTIAL/LOCAL MOVE
+            </h4>
+            <p>
+              Relocation within a state is Local move, with a network of more
+              than 50 local moving agents. We offer a full range of local moving
+              services within Lagos including full packing and set up services.
+            </p>
+            <p class="mb-0">
+              As a trusted moving service in Nigeria, our moving agents each
+              work tirelessly to maintain this reputation with an unwavering
+              dedication to safety, service and integrity.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row media">
+        <div class="col-sm-12 col-lg-6" data-aos="fade-right">
+          <div class="media-body">
+            <h4 class="my-3">COMMERCIAL/OFFICE MOVE</h4>
+            <p>
+              The Movers can help you save time and money on corporate moving
+              without compromising service or quality, regardless of your
+              company’s size or needs.
+            </p>
+            <p class="mb-0">
+              Our years of experience makes us the best, we provide expert
+              commercial moves with speed, efficiency and safety.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-6" data-aos="fade-left">
+          <img
+            src="http://expressmovers.com.ng/wp-content/uploads/2017/12/office-business-moves-e1513702270275.jpg"
+            class="img-fluid"
+            alt="..."
+          />
+        </div>
+      </div>
+      <div class="row media">
+        <div class="col-sm-12 col-lg-6" data-aos="fade-right">
+          <img
+            src="http://expressmovers.com.ng/wp-content/uploads/2017/12/evnts-e1513701765655.jpg"
+            class="img-fluid"
+            alt="..."
+          />
+        </div>
+        <div class="col-sm-12 col-lg-6" data-aos="fade-left">
+          <div class="media-body">
+            <h4 class="my-3">INVENTORY/EQUIPMENT MOVE</h4>
+            <p>
+              With so many responsibilities at work from planning an event to
+              making sure everything goes without a hitch, it could be really
+              stressful.
+            </p>
+            <p class="mb-0">
+              Let us handle the logistics of moving your equipments like
+              Speakers, Instruments, Chairs, tables etc. With years of
+              experience working with several events companies you can be sure
+              that you have the best team for the job.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section id="benefits" class="us-section container-fluid text-center">
+      <h1 class="text-center us-title">WHY US?</h1>
+      <div class="row px-5 my-3" data-aos="slide-up">
+        <div class="col-sm-6 col-md-6 col-lg-3 benefits-item">
+          <i class="fas fa-user-friends"></i>
+          <h4 class="">Dedicated Team.</h4>
+          <p class="">
+            A full-time, scaleable team of trusted developers.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 benefits-item">
+          <i class="fas fa-money-bill-wave"></i>
+          <h4 class="">Very Affordable.</h4>
+          <p class="">
+            A full-time, scaleable team of trusted developers.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 benefits-item">
+          <i class="fas fa-shipping-fast"></i>
+          <h4 class="">Express Service.</h4>
+          <p class="">
+            A full-time, scaleable team of trusted developers.
+          </p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-3 benefits-item">
+          <i class="fas fa-smile"></i>
+          <h4 class="">Stress-Free.</h4>
+          <p class="">
+            A full-time, scaleable team of trusted developers.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Section: Contact-->
+    <section id="contact" class="contact-section container">
+      <h1 class="text-center contact-title">Contact us</h1>
+      <div class="row my-5">
+        <div class="col-lg-5 col-md-12">
+          <form class="p-5 grey-text">
+            <div class="md-form form-sm">
+              <i class="fas fa-user prefix"></i>
+              <input
+                type="text"
+                id="form3"
+                class="form-control form-control-sm"
+                placeholder="Name"
+                required
+              />
+            </div>
+            <div class="md-form form-sm">
+              <i class="fas fa-envelope prefix"></i>
+              <input
+                type="email"
+                id="form2"
+                class="form-control form-control-sm"
+                placeholder="Email Address"
+                required
+              />
+            </div>
+            <div class="md-form form-sm">
+              <i class="fas fa-tag prefix"></i>
+              <input
+                type="text"
+                id="form32"
+                class="form-control form-control-sm"
+                placeholder="Message Title"
+              />
+            </div>
+            <div class="md-form form-sm">
+              <i class="fas fa-pencil-alt prefix"></i>
+              <textarea
+                type="text"
+                id="form8"
+                class="md-textarea form-control form-control-sm"
+                rows="4"
+                placeholder="Your Message"
+                required
+              ></textarea>
+            </div>
+            <div class="text-center mt-4">
+              <button class="btn btn-danger px-3">
+                Send <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-lg-7 col-md-12" data-aos="flip-up">
+          <!--Google map-->
+          <div
+            class="embed-responsive embed-responsive-1by1 z-depth-1-half map-container mb-5"
+            id="map-container"
+            style="height: 400px"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3964.7247553109437!2d3.5021113142663247!3d6.429395426035124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1576068396089!5m2!1sen!2sng"
+              class="embed-responsive-item"
+              width="600"
+              height="450"
+              allowfullscreen=""
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mainfooter" role="contentinfo">
+      <div class="footer-middle">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <a class="navbar-brand" href="index.html">
+                  <img
+                    src="./Assets/logo-preview.png"
+                    width="150"
+                    class="d-inline-block align-top img-fluid"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <!--Column1-->
+              <div class="footer-pad">
+                <h4>Movers.com</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <!--Column1 -->
+              <div class="footer-pad">
+                <h4>Contact Us</h4>
+                <ul class="list-unstyled">
+                  <li>
+                    <i class="fas fa-home"></i><span>Lagos, Nigeria</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope"></i><span>info@movers.com</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-phone-alt"></i
+                    ><span>+234 805 023 498</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h4>Follow Us</h4>
+              <ul class="social-network social-circle">
+                <li>
+                  <a href="#" class="icoFacebook" title="Facebook"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="icoTwitter" title="Twitter"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="icoInstagram" title="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 copy">
+              <p class="text-center">
+                &copy; Copyright 2019 - Movers.com All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/2534cfc66b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.11/js/mdb.min.js"
+    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
